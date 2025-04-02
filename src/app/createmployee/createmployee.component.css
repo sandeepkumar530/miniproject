@@ -1,0 +1,11 @@
+.crt{
+    width: 30%;
+    height: 100%;
+    background-color: yellowgreen;
+    text-align: center;
+    padding: 20px;
+    margin-left: 90px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+}

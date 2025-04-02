@@ -1,0 +1,66 @@
+<p>allemployees works!</p>
+<h1>Employees</h1>
+<input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="enter the value to search">
+<select [(ngModel)]="column">
+    <option>id</option>
+    <option>name</option>
+    <option>dob</option>
+    <option>company</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">Sort</button>
+
+<button (click)="map()">ADD Hike 30k</button>
+
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagination()">Pagination</button>
+<table border="1">
+    <thead class="head">
+        <tr>
+            <th>S:no</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Company</th>
+            <th>Package</th>
+            <th>Role</th>
+            <th>View</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="bdy">
+        <tr *ngFor="let allemployees of allemployeess;let i=index">
+            
+            <td>{{i+1}}</td>
+            <td>{{allemployees.id}}</td>
+            <td>{{allemployees.name}}</td>
+            <td>{{allemployees.dob}}</td>
+            <td>{{allemployees.email}}</td>
+            <td>{{allemployees.gender}}</td>
+            <td>{{allemployees.company}}</td>
+            <td  [ngStyle]="{'color':allemployees.package<900000?'red':'green'}">{{allemployees.package}}</td>
+            <td>{{allemployees.role}}</td>
+            <td>
+                <button routerLink="/dashboard/employee-details/{{allemployees.id}}" class="btn btn-primary">View</button>
+            </td>
+            <td>
+                <button (click)="delete(allemployees.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

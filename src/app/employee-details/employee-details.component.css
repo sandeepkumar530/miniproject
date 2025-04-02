@@ -1,0 +1,12 @@
+.detail{
+    background-color: cornsilk;
+    height: 30%;
+    width: 30%;
+    border-radius: 30px;
+    margin-top: 90px;
+    margin-left: 90px;
+    text-align: center;
+    padding: 10px;
+    border-color:orange;
+    border-style: solid;
+}

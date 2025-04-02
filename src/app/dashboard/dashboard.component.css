@@ -1,0 +1,17 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(34, 34, 87);
+    text-align: center;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: blue;
+    overflow: auto;
+}
